@@ -1,12 +1,12 @@
 <?php
 
-namespace DalPraS\DoctrineExtensions\Query\Mysql;
+namespace DPS\DoctrineExtensions\Query\Mysql;
 
 use Doctrine\ORM\Query\AST\Functions\FunctionNode,
     Doctrine\ORM\Query\Lexer;
 
 /**
- * @author Stefano Dal Pra' <dalpras@github.com>
+ * @author Stefano Dal Pra' <stefano@dalpra.info>
  */
 class AnyValue extends FunctionNode
 {
