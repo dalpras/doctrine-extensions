@@ -1,5 +1,5 @@
 {
-    "name": "dalpras/DoctrineExtensions",
+    "name": "dalpras/doctrine-extensions",
     "description": "Add new mysql 5.7 functions like ANY_VALUE to doctrine entity manager",
     "keywords": ["doctrine", "any_value", "mysql"],    
     "license": "MIT",
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "DalPraS\\DoctrineExtensions\\Query\\Mysql\\": "src/Query/Mysql/"
+            "DPS\\DoctrineExtensions\\Query\\Mysql\\": "src/Query/Mysql/"
         }
     }
 }
