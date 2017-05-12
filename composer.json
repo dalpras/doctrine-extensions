@@ -1,0 +1,20 @@
+{
+    "name": "dalpras/DoctrineExtensions",
+    "description": "Add new mysql 5.7 functions like ANY_VALUE to doctrine entity manager",
+    "keywords": ["doctrine", "any_value", "mysql"],    
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stefano Dal Prà"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DalPraS\\DoctrineExtensions\\Query\\Mysql\\": "src/Query/Mysql/"
+        }
+    }
+}
