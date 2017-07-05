@@ -6,7 +6,7 @@ use Doctrine\ORM\Query\AST\Functions\FunctionNode,
     Doctrine\ORM\Query\Lexer;
 
 /**
- * The anyvalue function is only available in MySQL 5.7+ for beeing SQL99 compatible.
+ * The ANY_VALUE function is only available in MySQL 5.7+ for beeing SQL99 compatible.
  * It's not supported in MariaDb 10.2, and have to be dropped in this db engine.
  */
 class AnyValue extends FunctionNode {
@@ -17,7 +17,7 @@ class AnyValue extends FunctionNode {
      * 
      * @var boolean
      */
-    private $isMariaDb = false;
+    private $isMariaDb = false; 
     
     public $stringPrimary;
 
@@ -26,7 +26,6 @@ class AnyValue extends FunctionNode {
         parent::__construct($name);
     }
 
-    
     public function getSql(\Doctrine\ORM\Query\SqlWalker $sqlWalker) {
         $result = $sqlWalker->walkStringPrimary($this->stringPrimary);
         return $this->isMariaDb ? $result : 'ANY_VALUE(' . $result . ')';
